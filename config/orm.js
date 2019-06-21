@@ -1,5 +1,7 @@
+//Importing mysql connection
 var connection = require('./connection.js');
 
+//Updating/changing the database
 var orm = {
     all: function (tableInput, cb) {
         connection.query('SELECT * FROM ' + tableInput + ';', function (err, result) {
@@ -24,5 +26,5 @@ var orm = {
 }
 
 
-
+//Exporting for use in other files
 module.exports = orm;

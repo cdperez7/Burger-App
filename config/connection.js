@@ -1,4 +1,7 @@
+//Required dependency
 var mysql = require('mysql');
+
+//Connecting to mysql
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -11,4 +14,5 @@ connection.connect(function(err){
     console.log("connected as id: " +connection.threadId);
 });
 
+//Export to ORM
 module.exports = connection;

@@ -1,5 +1,7 @@
+//Import the ORM to add functions that will interact with the database
 var orm = require('../config/orm.js');
 
+//Create burger object
 var burger = {
     all: function(cb){
         orm.all('burgers', function(res){
@@ -16,4 +18,5 @@ var burger = {
     }
 }
 
+//Exporting to other file
 module.exports = burger;
